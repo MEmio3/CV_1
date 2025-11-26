@@ -15,6 +15,7 @@
             --accent-yellow: #ffdb58;
             --accent-blue: #a2d2ff;
             --accent-red: #ffadad;
+            --accent-green: #a7f3d0; /* Added for GenEd */
             --border-width: 3px;
             --shadow-offset: 5px;
             --black: #000000;
@@ -63,11 +64,6 @@
             transition: all 0.2s ease;
         }
 
-        .nb-card:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 8px 8px 0px 0px var(--black);
-        }
-
         .nb-btn {
             display: inline-block;
             background: var(--accent-yellow);
@@ -83,10 +79,6 @@
         .nb-btn:hover {
             transform: translate(2px, 2px);
             box-shadow: 2px 2px 0px 0px var(--black);
-        }
-
-        .nb-btn.secondary {
-            background: var(--accent-blue);
         }
 
         .tag {
@@ -121,15 +113,12 @@
             position: relative;
         }
 
-        /* USER: REPLACE THIS IMAGE SOURCE */
         .profile-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Placeholder pattern until you add image */
-            background-image: repeating-linear-gradient(45deg, #bc93f9 25%, transparent 25%, transparent 75%, #bc93f9 75%, #bc93f9), repeating-linear-gradient(45deg, #bc93f9 25%, #f4f3ee 25%, #f4f3ee 75%, #bc93f9 75%, #bc93f9);
-            background-position: 0 0, 10px 10px;
-            background-size: 20px 20px;
+            /* Placeholder pattern if image fails to load */
+            background-color: #bc93f9;
         }
 
         .hero-text h1 {
@@ -222,7 +211,7 @@
         
         <header class="header-grid">
             <div class="profile-img-container">
-                <img src="MEmioAIgen76.png" alt="Profile Photo" class="profile-img">
+                <img src="profile.png" alt="Profile Photo" class="profile-img">
             </div>
             <div class="hero-text">
                 <h1>Java Developer</h1>
@@ -292,6 +281,10 @@
                     Algorithms
                 </div>
                 <div class="course-item">
+                    <span class="course-code">CSE 320</span>
+                    Data Communications
+                </div>
+                <div class="course-item">
                     <span class="course-code">CSE 421</span>
                     Computer Networks
                 </div>
@@ -313,11 +306,15 @@
             <div class="course-grid">
                 <div class="course-item">
                     <span class="course-code">MAT 215</span>
-                    Complex Variables & Laplace Transformations
+                    Complex Variables & Laplace
                 </div>
                 <div class="course-item">
                     <span class="course-code">MAT 216</span>
                     Linear Algebra
+                </div>
+                <div class="course-item">
+                    <span class="course-code">STA 201</span>
+                    Elements of Statistics & Probability
                 </div>
                 <div class="course-item">
                     <span class="course-code">MAT 110</span>
@@ -329,7 +326,7 @@
                 </div>
             </div>
 
-            <div class="category-header">PHYSICAL SCIENCES</div>
+            <div class="category-header">NATURAL SCIENCES</div>
             <div class="course-grid">
                 <div class="course-item">
                     <span class="course-code">PHY 111</span>
@@ -339,7 +336,36 @@
                     <span class="course-code">PHY 112</span>
                     Principles of Physics II
                 </div>
+                <div class="course-item">
+                    <span class="course-code">BIO 101</span>
+                    Introduction to Biology
+                </div>
             </div>
+
+            <div class="category-header" style="background: var(--accent-purple); color: black;">GENERAL EDUCATION & FOUNDATION</div>
+             <div class="course-grid">
+                 <div class="course-item">
+                     <span class="course-code">ENG 101</span>
+                     English Fundamentals
+                 </div>
+                 <div class="course-item">
+                     <span class="course-code">ENG 102</span>
+                     English Composition
+                 </div>
+                 <div class="course-item">
+                     <span class="course-code">BNG 103</span>
+                     Bangla Language & Literature
+                 </div>
+                 <div class="course-item">
+                     <span class="course-code">HUM 103</span>
+                     Ethics and Culture
+                 </div>
+                 <div class="course-item">
+                     <span class="course-code">EMB 101</span>
+                     Emergence of Bangladesh
+                 </div>
+             </div>
+
         </section>
 
         <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 4px solid black; text-align: center; font-family: 'Space Mono', monospace;">
@@ -348,6 +374,4 @@
 
     </div>
 </body>
-
 </html>
-
